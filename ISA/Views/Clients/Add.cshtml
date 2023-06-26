@@ -1,0 +1,33 @@
+﻿@model ISA.Models.AddVM.AddClientViewModel
+
+@{
+}
+<style>
+    .input-validation-error{
+        border-color: red;
+    }
+</style>
+<hi>Добавление Клиента</hi>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Фамилия</label>
+        <input type="text" class="form-control" asp-for="Surname">
+        <span asp-validation-for="Surname" class="text-danger" ></span>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Имя</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Отчество</label>
+        <input type="text" class="form-control" asp-for="Patronymic">
+        <span asp-validation-for="Patronymic" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Дата Рождения</label>
+        <input type="date" class="form-control" asp-for="DateOfB">
+        <span asp-validation-for="DateOfB" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>

@@ -1,0 +1,24 @@
+﻿@model ISA.Models.AddVM.AddStaffViewModel
+
+@{
+}
+<hi>Добавление Сотрудника</hi>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Фамилия</label>
+        <input type="text" class="form-control" asp-for="Surname">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Имя</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Отчество</label>
+        <input type="text" class="form-control" asp-for="Patronymic">
+    </div>
+    <div class="form-group">
+        @Html.DropDownListFor(x => x.PostsId, ViewBag.Post as SelectList, "Please select", new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <button type="button" class="btn btn-primary">Отменить</button>
+</form>

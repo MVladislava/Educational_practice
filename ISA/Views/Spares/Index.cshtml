@@ -1,0 +1,25 @@
+﻿@model List<TestAspCSDb.Models.Domains.Spare>
+@{
+}
+<hi>Запчасти</hi>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Наименование</th>
+            <th>Склад</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var spare in Model)
+        {
+            <tr>
+                <td>@spare.Id</td>
+                <td>@spare.Name</td>
+                <td>@spare.StoragesId</td>
+                <td><a href="Spares/Delete/@spare.Id">Удалить</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

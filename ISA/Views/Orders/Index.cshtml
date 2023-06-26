@@ -1,0 +1,33 @@
+﻿@model List<TestAspCSDb.Models.Domains.Order>
+@{
+}
+<hi>Заказ-наряды</hi>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Дата</th>
+            <th>Автомобиль</th>
+            <th>Клиент</th>
+            <th>Услуга</th>
+            <th>Запчасть</th>
+            <th>Сотрудник</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.Data</td>
+                <td>@order.CarsId</td>
+                <td>@order.ClientsId</td>
+                <td>@order.ServicesId</td>
+                <td>@order.SparesId</td>
+                <td>@order.StaffsId</td>
+                <td><a href="Orders/View/@order.Id">Редактировать</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

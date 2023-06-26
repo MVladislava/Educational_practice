@@ -1,0 +1,23 @@
+﻿@model List<TestAspCSDb.Models.Domains.Post>
+@{
+}
+<hi>Должности</hi>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Наименование</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.Id</td>
+                <td>@post.Name</td>
+                <td><a href="Posts/Delete/@post.Id">Удалить</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

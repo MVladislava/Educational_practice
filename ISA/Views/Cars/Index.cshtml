@@ -1,0 +1,30 @@
+﻿@model List<TestAspCSDb.Models.Domains.Car>
+@{
+}
+<hi>Автомобили</hi>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Регистрационный номер</th>
+            <th>Бренд</th>
+            <th>Модель</th>
+            <th>Id Клиента</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.Id</td>
+                <td>@car.RegNumber</td>
+                <td>@car.Brand</td>
+                <td>@car.Model</td>
+                <td>@car.ClientId</td>
+                <td><a href="Cars/View/@car.Id">Редактировать</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

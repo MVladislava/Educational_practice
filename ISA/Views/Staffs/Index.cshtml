@@ -1,0 +1,29 @@
+﻿@model List<TestAspCSDb.Models.Domains.Staff>
+@{
+}
+<hi>Автомобили</hi>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Должность</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var staff in Model)
+        {
+            <tr>
+                <td>@staff.Id</td>
+                <td>@staff.Surname</td>
+                <td>@staff.Name</td>
+                <td>@staff.Patronymic</td>
+                <td>@staff.PostsId</td>
+                <td><a href="Staffs/View/@staff.Id">Редактировать</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

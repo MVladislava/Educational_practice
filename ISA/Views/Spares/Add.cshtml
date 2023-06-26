@@ -1,0 +1,14 @@
+﻿@model ISA.Models.AddVM.AddSpareViewModel
+@{
+}
+<hi>Добавление Запчасти</hi>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Наименование</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="form-group">
+        @Html.DropDownListFor(x => x.StoragesId, ViewBag.Storage as SelectList, "Please select", new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>

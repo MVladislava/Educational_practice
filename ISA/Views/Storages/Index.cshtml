@@ -1,0 +1,23 @@
+﻿@model List<TestAspCSDb.Models.Domains.Storage>
+@{
+}
+<hi>Склад</hi>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Наименование</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var storage in Model)
+        {
+            <tr>
+                <td>@storage.Id</td>
+                <td>@storage.Name</td>
+                <td><a href="Storages/View/@storage.Id">Редактировать</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

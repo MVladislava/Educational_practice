@@ -1,0 +1,37 @@
+﻿@model ISA.Models.AddVM.AddOrderViewModel
+
+@{
+}
+<style>
+    .input-validation-error {
+        border-color: red;
+    }
+</style>
+<hi>Добавление заказ-наряда</hi>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Дата</label>
+        <input type="date" class="form-control" asp-for="Data">
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">Автомобиль</label>
+        @Html.DropDownListFor(x => x.CarsId, ViewBag.Car as SelectList, "Please select", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">Клиент</label>
+        @Html.DropDownListFor(x => x.ClientsId, ViewBag.Client as SelectList, "Please select", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">Услуга</label>
+        @Html.DropDownListFor(x => x.ServicesId, ViewBag.Service as SelectList, "Please select", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">Запчасть</label>
+        @Html.DropDownListFor(x => x.SparesId, ViewBag.Spare as SelectList, "Please select", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">Сотрудник</label>
+        @Html.DropDownListFor(x => x.StaffsId, ViewBag.Staff as SelectList, "Please select", new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+</form>

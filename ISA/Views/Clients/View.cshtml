@@ -1,0 +1,37 @@
+﻿@model ISA.Models.UpdateVM.UpdateClientVM
+@{
+}
+<style>
+    .input-validation-error {
+        border-color: red;
+    }
+</style>
+<hi>Редактирование Клиента</hi>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">ID</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Фамилия</label>
+        <input type="text" class="form-control" asp-for="Surname">
+        <span asp-validation-for="Surname" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Имя</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Отчество</label>
+        <input type="text" class="form-control" asp-for="Patronymic">
+        <span asp-validation-for="Patronymic" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Дата рождения</label>
+        <input type="date" class="form-control" asp-for="DateOfB">
+        <span asp-validation-for="DateOfB" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Clients">Удалить</button>
+</form>

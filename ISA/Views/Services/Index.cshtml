@@ -1,0 +1,23 @@
+﻿@model List<TestAspCSDb.Models.Domains.Service>
+@{
+}
+<hi>Услуги</hi>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Наименование</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.Id</td>
+                <td>@service.Name</td>
+                <td><a href="Spares/Delete/@service.Id">Удалить</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

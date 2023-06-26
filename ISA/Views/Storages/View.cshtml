@@ -1,0 +1,16 @@
+﻿@model ISA.Models.UpdateVM.UpdateStorageVM
+@{
+}
+<hi>Редаетирование Склада</hi>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Наименование</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Cars">Удалить</button>
+</form>
